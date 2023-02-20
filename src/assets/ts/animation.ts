@@ -28,12 +28,26 @@ function displayTodo() {
 
 function createTodoElementHtml(todo: any, index: number) {
     const li = document.createElement('li')
+    const deleteBtn = document.createElement('button')
+    deleteBtn.innerHTML = 'Supprimer'
+
+    deleteBtn.addEventListener('click', (event) => {
+        deleteToDoElement(index)
+        displayTodo()
+    })
+
     li.innerHTML = `
         <span class="todo ${ todo.done ? 'done' : ''}"></span>
         <p>${todo.text}</p>
         <button>Editer</button>
-        <button>supprimer</button>
     `;
+
+    li.addEventListener('click', (event) => {
+        changeTodoStatut(index)
+        displayTodo()
+    })
+
+    li.appendChild(deleteBtn)
 
     return li
 }
@@ -41,3 +55,48 @@ function createTodoElementHtml(todo: any, index: number) {
 displayTodo()
 
 export {};
+
+/* ------------------------------------------------------------------------ 
+1. Add toDo
+-------------------------------------------------------------------------*/
+
+const form = document.querySelector('form')
+const input = document.querySelector('input')
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    const inputValue: string = input.value
+    input.value = ''
+    addTodoElement(inputValue)
+    displayTodo()
+})
+
+//This code creates a new list item element with the given text (input) and appends it.
+
+function addTodoElement(text: any) {
+    todoList.push(
+        {
+            text,
+            done: false
+        }
+    )
+}
+
+/* ------------------------------------------------------------------------ 
+2. delete toDo 
+-------------------------------------------------------------------------*/
+
+function deleteToDoElement(index: number) {
+    todoList.splice(index, 1)
+}
+
+/* ------------------------------------------------------------------------ 
+3. Change done statut 
+-------------------------------------------------------------------------*/
+
+function changeTodoStatut(index: number) {
+    
+    //The code takes the index of the item in the todo list and sets the "done" property to the opposite of what it currently is.
+    todoList[index].done = !todoList[index].done
+}
