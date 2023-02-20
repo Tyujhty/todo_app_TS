@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------------- 
+SUMMARY 
+------------------------------------------------------------------------- 
+0. Flex
+*/
+/* ------------------------------------------------------------------------- 
+0. Flex
+------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- 
+0. GENERAL
+------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------------------- 
+SUMMARY 
+------------------------------------------------------------------------- 0. Colors
+
+/
+
+
+/* ------------------------------------------------------------------------ 
+0. Colors
+------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ 
+0.Home
+------------------------------------------------------------------------- */
+.container {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 30px;
+  width: 500px;
+}
+.container h1 {
+  color: aqua;
+}
+.container form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.container form input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  flex: 1;
+  margin-right: 15px;
+  outline: 0;
+  padding: 8px 15px;
+}
+.container ul {
+  padding: 0;
+  list-style: none;
+}
+.container ul li {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container ul li p {
+  flex: 1;
+  margin: 0;
+}
+.container ul li .todo {
+  border: 2px solid #333;
+  border-radius: 30px;
+  flex: 0 0 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.container ul li .todo.done {
+  background-color: #333;
+}
+
+/* ------------------------------------------------------------------------ 
+0. form buttons
+-------------------------------------------------------------------------*/
+button {
+  background-color: #2980b9;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 3px;
+  padding: 5px 15px;
+}
+
+/* -------------------------------------------------------------------------SUMMARY 
+-------------------------------------------------------------------------0. font family
+1. Components
+/
+
+/* ------------------------------------------------------------------------ 
+0. Colors
+------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ 
+1. Components
+------------------------------------------------------------------------- */
+button {
+  font-weight: bold;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
