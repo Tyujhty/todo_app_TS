@@ -1,3 +1,3 @@
 import './style.scss';
 
-import './assets/ts/animation'
+import './assets/ts/function'

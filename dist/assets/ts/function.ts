@@ -2,15 +2,14 @@
 0. Todo display
 -------------------------------------------------------------------------*/
 
-//Empty array of objects with two properties, text and done. The text property is a string and the done property is a boolean. This array is used to store a list of to-do items.
-
 const ul = document.querySelector('ul')
 
+//Empty array of objects with two properties, text and done. The text property is a string and the done property is a boolean. This array is used to store a list of to-do items.
 const todoList: { text: string, done: boolean, editMode: boolean } [] = [
     {
         text: 'Apprendre le Javascript',
-        done: true,
-        editMode: true
+        done: false,
+        editMode: false
     },
     {
         text: 'Apprendre le typescript',
@@ -19,7 +18,7 @@ const todoList: { text: string, done: boolean, editMode: boolean } [] = [
     }
 ]
 
-//The function takes a list of todos (todoList) and creates a HTML element for each todo.
+//This code is a function that displays a list of todos. It takes in an array of todos (todoList) and maps through them. For each todo, it checks if it is in edit mode.Then it creates a HTML element for each todo.
 function displayTodo() {
     const todosNode = todoList.map((todo, index) => {
         if(todo.editMode) {
@@ -38,13 +37,7 @@ function createTodoElementHtml(todo: any, index: number) {
     const deleteBtn = document.createElement('button')
     deleteBtn.innerHTML = 'Supprimer'
 
-    deleteBtn.addEventListener('click', (event) => {
-        event.stopPropagation()
-
-        deleteToDoElement(index)
-    })
-
-    const editBtn = document.querySelector('button')
+    const editBtn = document.createElement('button')
     editBtn.innerHTML = 'Editer'
 
     editBtn.addEventListener('click', (event) => {
@@ -52,7 +45,11 @@ function createTodoElementHtml(todo: any, index: number) {
 
         openEditMode(index)
     })
+    deleteBtn.addEventListener('click', (event) => {
+        event.stopPropagation()
 
+        deleteToDoElement(index)
+    })
 
     li.innerHTML = `
         <span class="todo ${ todo.done ? 'done' : ''}"></span>
@@ -60,6 +57,8 @@ function createTodoElementHtml(todo: any, index: number) {
     `;
 
     li.addEventListener('click', (event) => {
+        event.stopPropagation()
+
         changeTodoStatut(index)
     })
 
@@ -77,12 +76,12 @@ export {};
 -------------------------------------------------------------------------*/
 
 const form = document.querySelector('form')
-const input = document.querySelector('input')
+const input: any = document.querySelector('.inputForm')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    const inputValue: string = input.value
+    const inputValue = input.value
     input.value = ''
     addTodoElement(inputValue)
 })
@@ -118,7 +117,7 @@ function deleteToDoElement(index: number) {
 function changeTodoStatut(index: number) {
 
     //The code takes the index of the item in the todo list and sets the "done" property to the opposite of what it currently is.
-    todoList[index].editMode = !todoList[index].editMode
+    todoList[index].done = !todoList[index].done
     displayTodo()
 }
 
@@ -143,17 +142,15 @@ function createEditTodoElement(todo: any, index: number) {
         event.stopPropagation()
 
         saveEditTodo(index, input)
-        displayTodo()
     })
 
     cancelBtn.addEventListener('click', (event) => {
         event.stopPropagation()
 
-        changeTodoStatut(index)
-        displayTodo()
+        openEditMode(index)
     })
 
-    li.append(input, saveBtn, cancelBtn)
+    li.append(input,cancelBtn, saveBtn)
     
     return li
 }
@@ -163,14 +160,15 @@ function createEditTodoElement(todo: any, index: number) {
 -------------------------------------------------------------------------*/
 
 function openEditMode(index: number) {
-    todoList[index].editMode = true
+    todoList[index].editMode = !todoList[index].editMode
     displayTodo()
 }
-
 
 /* ------------------------------------------------------------------------ 
 6. Save edit mode
 -------------------------------------------------------------------------*/
+
+//Sets the text of the todoList item at the given index to the new input value, sets the editMode of the todoList item at the given index to false, and calls the displayTodo() function.
 
 function saveEditTodo(index: number, input: any) {
     const newInputValue = input.value

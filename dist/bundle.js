@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- \n0. Flex\n*/\n/* ------------------------------------------------------------------------- \n0. Flex\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------- \n0. GENERAL\n------------------------------------------------------------------------- */\n*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- 0. Colors\n\n/\n\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n0.Home\n------------------------------------------------------------------------- */\n.container {\n  border: 1px solid #eee;\n  border-radius: 5px;\n  padding: 30px;\n  width: 500px;\n}\n.container h1 {\n  color: aqua;\n}\n.container form {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-bottom: 20px;\n}\n.container form input {\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  flex: 1;\n  margin-right: 15px;\n  outline: 0;\n  padding: 8px 15px;\n}\n.container ul {\n  padding: 0;\n  list-style: none;\n}\n.container ul li {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n.container ul li p {\n  flex: 1;\n  margin: 0;\n}\n.container ul li .todo {\n  border: 2px solid #333;\n  border-radius: 30px;\n  flex: 0 0 20px;\n  height: 20px;\n  margin-right: 15px;\n}\n.container ul li .todo.done {\n  background-color: #333;\n}\n\n/* ------------------------------------------------------------------------ \n0. form buttons\n-------------------------------------------------------------------------*/\nbutton {\n  background-color: #2980b9;\n  border: 0;\n  border-radius: 5px;\n  cursor: pointer;\n  margin: 0 3px;\n  padding: 5px 15px;\n}\n\n/* -------------------------------------------------------------------------SUMMARY \n-------------------------------------------------------------------------0. font family\n1. Components\n/\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n1. Components\n------------------------------------------------------------------------- */\nbutton {\n  font-weight: bold;\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/assets/scss/utilities/_mixins.scss","webpack://./src/assets/scss/base/_reset.scss","webpack://./src/style.scss","webpack://./src/assets/scss/utilities/_variables.scss","webpack://./src/assets/scss/layouts/_home.scss","webpack://./src/assets/scss/components/_buttons.scss","webpack://./src/assets/scss/base/_typography.scss"],"names":[],"mappings":"AAAA;;;;CAAA;AAOA;;2EAAA;ACPA;;2EAAA;AAIA;EACI,sBAAA;EACA,SAAA;EACA,UAAA;ACQJ;;ADLA;EDEI,mBADgB;EAEhB,aAAA;EACA,sBAHoC;EAIpC,uBAJsD;ECGtD,iBAAA;ACSJ;;ACvBA;;;;;;;;;2EAAA;ACAA;;2EAAA;AAIA;EACI,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;AFmCJ;AEjCI;EACI,WAAA;AFmCR;AEhCI;EJFA,mBADgB;EAEhB,aAAA;EACA,mBIC8B;EJA9B,uBAJsD;EIMlD,mBAAA;AFoCR;AElCQ;EACI,sBAAA;EACA,kBAAA;EACA,OAAA;EACA,kBAAA;EACA,UAAA;EACA,iBAAA;AFoCZ;AEhCI;EACI,UAAA;EACA,gBAAA;AFkCR;AEhCQ;EJrBJ,mBADgB;EAEhB,aAAA;EACA,mBIoBkC;EJnBlC,uBAJsD;AE4D1D;AEnCY;EACI,OAAA;EACA,SAAA;AFqChB;AEnCY;EACI,sBAAA;EACA,mBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;AFqChB;AElCY;EACI,sBDrCG;ADyEnB;;AGrFA;;0EAAA;AAIA;EACI,yBFQW;EEPX,SAAA;EACA,kBAAA;EACA,eAAA;EACA,aAAA;EACA,iBAAA;AHuFJ;;AIjGA;;;;;;;2EAAA;AAUA;;2EAAA;AAIA;EACI,iBAAA;EACA,YHFiB;ADmGrB","sourcesContent":["/* ------------------------------------------------------------------------- \r\nSUMMARY \r\n------------------------------------------------------------------------- \r\n0. Flex\r\n*/\r\n\r\n\r\n/* ------------------------------------------------------------------------- \r\n0. Flex\r\n------------------------------------------------------------------------- */\r\n\r\n@mixin flex($align: center, $direction: column, $justify: center) {\r\n    align-items: $align;\r\n    display: flex;\r\n    flex-direction: $direction;\r\n    justify-content: $justify;\r\n}","/* ------------------------------------------------------------------------- \r\n0. GENERAL\r\n------------------------------------------------------------------------- */\r\n\r\n*, *::before, *::after {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody {\r\n    \r\n    @include flex;\r\n\r\n    min-height: 100vh;\r\n}","/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- \n0. Flex\n*/\n/* ------------------------------------------------------------------------- \n0. Flex\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------- \n0. GENERAL\n------------------------------------------------------------------------- */\n*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- 0. Colors\n\n/\n\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n0.Home\n------------------------------------------------------------------------- */\n.container {\n  border: 1px solid #eee;\n  border-radius: 5px;\n  padding: 30px;\n  width: 500px;\n}\n.container h1 {\n  color: aqua;\n}\n.container form {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-bottom: 20px;\n}\n.container form input {\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  flex: 1;\n  margin-right: 15px;\n  outline: 0;\n  padding: 8px 15px;\n}\n.container ul {\n  padding: 0;\n  list-style: none;\n}\n.container ul li {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n.container ul li p {\n  flex: 1;\n  margin: 0;\n}\n.container ul li .todo {\n  border: 2px solid #333;\n  border-radius: 30px;\n  flex: 0 0 20px;\n  height: 20px;\n  margin-right: 15px;\n}\n.container ul li .todo.done {\n  background-color: #333;\n}\n\n/* ------------------------------------------------------------------------ \n0. form buttons\n-------------------------------------------------------------------------*/\nbutton {\n  background-color: #2980b9;\n  border: 0;\n  border-radius: 5px;\n  cursor: pointer;\n  margin: 0 3px;\n  padding: 5px 15px;\n}\n\n/* -------------------------------------------------------------------------SUMMARY \n-------------------------------------------------------------------------0. font family\n1. Components\n/\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n1. Components\n------------------------------------------------------------------------- */\nbutton {\n  font-weight: bold;\n  color: white;\n}","/* ------------------------------------------------------------------------- \r\nSUMMARY \r\n------------------------------------------------------------------------- 0. Colors\r\n\r\n/\r\n\r\n\r\n/* ------------------------------------------------------------------------ \r\n0. Colors\r\n------------------------------------------------------------------------- */\r\n\r\n$border-color: #eee;\r\n$background-color: #333;\r\n$button-color: #2980b9;\r\n$button-text-color : white;","/* ------------------------------------------------------------------------ \r\n0.Home\r\n------------------------------------------------------------------------- */\r\n\r\n.container {\r\n    border: 1px solid $border-color;\r\n    border-radius: 5px;\r\n    padding: 30px;\r\n    width: 500px;\r\n\r\n    h1 {\r\n        color: aqua;\r\n    }\r\n\r\n    form {\r\n        @include flex($direction: row);\r\n\r\n        margin-bottom: 20px;\r\n\r\n        input {\r\n            border:  1px solid #ddd;\r\n            border-radius: 3px;\r\n            flex: 1;\r\n            margin-right: 15px;\r\n            outline: 0;\r\n            padding: 8px 15px;\r\n        }\r\n    }\r\n    \r\n    ul {\r\n        padding: 0;\r\n        list-style: none;\r\n\r\n        li {\r\n            @include flex($direction: row);\r\n\r\n            p {\r\n                flex: 1;\r\n                margin: 0;\r\n            }\r\n            .todo {\r\n                border: 2px solid $background-color;\r\n                border-radius: 30px;\r\n                flex: 0 0 20px;\r\n                height: 20px;\r\n                margin-right: 15px;\r\n            }\r\n            \r\n            .todo.done {\r\n                background-color: $background-color;\r\n            }\r\n        }\r\n    }\r\n}","/* ------------------------------------------------------------------------ \r\n0. form buttons\r\n-------------------------------------------------------------------------*/\r\n\r\nbutton {\r\n    background-color: $button-color;\r\n    border: 0;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n    margin: 0 3px;\r\n    padding: 5px 15px;\r\n}","/* -------------------------------------------------------------------------SUMMARY \r\n-------------------------------------------------------------------------0. font family\r\n1. Components\r\n/\r\n\r\n/* ------------------------------------------------------------------------ \r\n0. Colors\r\n------------------------------------------------------------------------- */\r\n\r\n\r\n/* ------------------------------------------------------------------------ \r\n1. Components\r\n------------------------------------------------------------------------- */\r\n\r\nbutton {\r\n    font-weight: bold;\r\n    color: $button-text-color;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- \n0. Flex\n*/\n/* ------------------------------------------------------------------------- \n0. Flex\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------- \n0. GENERAL\n------------------------------------------------------------------------- */\n*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- 0. Colors\n\n/\n\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n0.Home\n------------------------------------------------------------------------- */\n.container {\n  border: 1px solid #eee;\n  border-radius: 5px;\n  padding: 30px;\n  width: 500px;\n}\n.container h1 {\n  color: aqua;\n}\n.container form {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-bottom: 20px;\n}\n.container form input {\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  flex: 1;\n  margin-right: 15px;\n  outline: 0;\n  padding: 8px 15px;\n}\n.container ul {\n  padding: 0;\n  list-style: none;\n}\n.container ul li {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  padding: 10px 0;\n}\n.container ul li input {\n  flex: 1;\n}\n.container ul li:hover {\n  background-color: #ddd;\n}\n.container ul li p {\n  flex: 1;\n  margin: 0;\n}\n.container ul li .todo {\n  border: 2px solid #333;\n  border-radius: 30px;\n  flex: 0 0 20px;\n  height: 20px;\n  margin-right: 15px;\n}\n.container ul li .todo.done {\n  background-color: #333;\n}\n\n/* ------------------------------------------------------------------------ \n0. form buttons\n-------------------------------------------------------------------------*/\nbutton {\n  background-color: #2980b9;\n  border: 0;\n  border-radius: 5px;\n  cursor: pointer;\n  margin: 0 3px;\n  padding: 5px 15px;\n}\n\n/* -------------------------------------------------------------------------SUMMARY \n-------------------------------------------------------------------------0. font family\n1. Components\n/\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n1. Components\n------------------------------------------------------------------------- */\nbutton {\n  font-weight: bold;\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/assets/scss/utilities/_mixins.scss","webpack://./src/assets/scss/base/_reset.scss","webpack://./src/style.scss","webpack://./src/assets/scss/utilities/_variables.scss","webpack://./src/assets/scss/layouts/_home.scss","webpack://./src/assets/scss/components/_buttons.scss","webpack://./src/assets/scss/base/_typography.scss"],"names":[],"mappings":"AAAA;;;;CAAA;AAOA;;2EAAA;ACPA;;2EAAA;AAIA;EACI,sBAAA;EACA,SAAA;EACA,UAAA;ACQJ;;ADLA;EDEI,mBADgB;EAEhB,aAAA;EACA,sBAHoC;EAIpC,uBAJsD;ECGtD,iBAAA;ACSJ;;ACvBA;;;;;;;;;2EAAA;ACAA;;2EAAA;AAIA;EACI,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;AFmCJ;AEjCI;EACI,WAAA;AFmCR;AEhCI;EJFA,mBADgB;EAEhB,aAAA;EACA,mBIC8B;EJA9B,uBAJsD;EIMlD,mBAAA;AFoCR;AElCQ;EACI,sBAAA;EACA,kBAAA;EACA,OAAA;EACA,kBAAA;EACA,UAAA;EACA,iBAAA;AFoCZ;AEhCI;EACI,UAAA;EACA,gBAAA;AFkCR;AEhCQ;EJrBJ,mBADgB;EAEhB,aAAA;EACA,mBIoBkC;EJnBlC,uBAJsD;EIyB9C,eAAA;AFoCZ;AElCY;EACI,OAAA;AFoChB;AEjCY;EACI,sBD5BD;AD+Df;AEhCY;EACI,OAAA;EACA,SAAA;AFkChB;AEhCY;EACI,sBAAA;EACA,mBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;AFkChB;AE/BY;EACI,sBD/CG;ADgFnB;;AG5FA;;0EAAA;AAIA;EACI,yBFQW;EEPX,SAAA;EACA,kBAAA;EACA,eAAA;EACA,aAAA;EACA,iBAAA;AH8FJ;;AIxGA;;;;;;;2EAAA;AAUA;;2EAAA;AAIA;EACI,iBAAA;EACA,YHFiB;AD0GrB","sourcesContent":["/* ------------------------------------------------------------------------- \r\nSUMMARY \r\n------------------------------------------------------------------------- \r\n0. Flex\r\n*/\r\n\r\n\r\n/* ------------------------------------------------------------------------- \r\n0. Flex\r\n------------------------------------------------------------------------- */\r\n\r\n@mixin flex($align: center, $direction: column, $justify: center) {\r\n    align-items: $align;\r\n    display: flex;\r\n    flex-direction: $direction;\r\n    justify-content: $justify;\r\n}","/* ------------------------------------------------------------------------- \r\n0. GENERAL\r\n------------------------------------------------------------------------- */\r\n\r\n*, *::before, *::after {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody {\r\n    \r\n    @include flex;\r\n\r\n    min-height: 100vh;\r\n}","/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- \n0. Flex\n*/\n/* ------------------------------------------------------------------------- \n0. Flex\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------- \n0. GENERAL\n------------------------------------------------------------------------- */\n*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n/* ------------------------------------------------------------------------- \nSUMMARY \n------------------------------------------------------------------------- 0. Colors\n\n/\n\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n0.Home\n------------------------------------------------------------------------- */\n.container {\n  border: 1px solid #eee;\n  border-radius: 5px;\n  padding: 30px;\n  width: 500px;\n}\n.container h1 {\n  color: aqua;\n}\n.container form {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-bottom: 20px;\n}\n.container form input {\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  flex: 1;\n  margin-right: 15px;\n  outline: 0;\n  padding: 8px 15px;\n}\n.container ul {\n  padding: 0;\n  list-style: none;\n}\n.container ul li {\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  padding: 10px 0;\n}\n.container ul li input {\n  flex: 1;\n}\n.container ul li:hover {\n  background-color: #ddd;\n}\n.container ul li p {\n  flex: 1;\n  margin: 0;\n}\n.container ul li .todo {\n  border: 2px solid #333;\n  border-radius: 30px;\n  flex: 0 0 20px;\n  height: 20px;\n  margin-right: 15px;\n}\n.container ul li .todo.done {\n  background-color: #333;\n}\n\n/* ------------------------------------------------------------------------ \n0. form buttons\n-------------------------------------------------------------------------*/\nbutton {\n  background-color: #2980b9;\n  border: 0;\n  border-radius: 5px;\n  cursor: pointer;\n  margin: 0 3px;\n  padding: 5px 15px;\n}\n\n/* -------------------------------------------------------------------------SUMMARY \n-------------------------------------------------------------------------0. font family\n1. Components\n/\n\n/* ------------------------------------------------------------------------ \n0. Colors\n------------------------------------------------------------------------- */\n/* ------------------------------------------------------------------------ \n1. Components\n------------------------------------------------------------------------- */\nbutton {\n  font-weight: bold;\n  color: white;\n}","/* ------------------------------------------------------------------------- \r\nSUMMARY \r\n------------------------------------------------------------------------- 0. Colors\r\n\r\n/\r\n\r\n\r\n/* ------------------------------------------------------------------------ \r\n0. Colors\r\n------------------------------------------------------------------------- */\r\n\r\n$border-color: #eee;\r\n$background-color: #333;\r\n$button-color: #2980b9;\r\n$button-text-color : white;\r\n$light-color : #ddd;","/* ------------------------------------------------------------------------ \r\n0.Home\r\n------------------------------------------------------------------------- */\r\n\r\n.container {\r\n    border: 1px solid $border-color;\r\n    border-radius: 5px;\r\n    padding: 30px;\r\n    width: 500px;\r\n\r\n    h1 {\r\n        color: aqua;\r\n    }\r\n\r\n    form {\r\n        @include flex($direction: row);\r\n\r\n        margin-bottom: 20px;\r\n\r\n        input {\r\n            border:  1px solid $light-color;\r\n            border-radius: 3px;\r\n            flex: 1;\r\n            margin-right: 15px;\r\n            outline: 0;\r\n            padding: 8px 15px;\r\n        }\r\n    }\r\n    \r\n    ul {\r\n        padding: 0;\r\n        list-style: none;\r\n\r\n        li {\r\n            @include flex($direction: row);\r\n\r\n            padding: 10px 0;\r\n\r\n            input {\r\n                flex: 1;\r\n            }\r\n\r\n            &:hover {\r\n                background-color: $light-color;\r\n            }\r\n\r\n            p {\r\n                flex: 1;\r\n                margin: 0;\r\n            }\r\n            .todo {\r\n                border: 2px solid $background-color;\r\n                border-radius: 30px;\r\n                flex: 0 0 20px;\r\n                height: 20px;\r\n                margin-right: 15px;\r\n            }\r\n            \r\n            .todo.done {\r\n                background-color: $background-color;\r\n            }\r\n        }\r\n    }\r\n}","/* ------------------------------------------------------------------------ \r\n0. form buttons\r\n-------------------------------------------------------------------------*/\r\n\r\nbutton {\r\n    background-color: $button-color;\r\n    border: 0;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n    margin: 0 3px;\r\n    padding: 5px 15px;\r\n}","/* -------------------------------------------------------------------------SUMMARY \r\n-------------------------------------------------------------------------0. font family\r\n1. Components\r\n/\r\n\r\n/* ------------------------------------------------------------------------ \r\n0. Colors\r\n------------------------------------------------------------------------- */\r\n\r\n\r\n/* ------------------------------------------------------------------------ \r\n1. Components\r\n------------------------------------------------------------------------- */\r\n\r\nbutton {\r\n    font-weight: bold;\r\n    color: $button-text-color;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -507,42 +507,142 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/assets/ts/animation.ts":
-/*!************************************!*\
-  !*** ./src/assets/ts/animation.ts ***!
-  \************************************/
+/***/ "./src/assets/ts/function.ts":
+/*!***********************************!*\
+  !*** ./src/assets/ts/function.ts ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* ------------------------------------------------------------------------
 0. Todo display
 -------------------------------------------------------------------------*/
-//Empty array of objects with two properties, text and done. The text property is a string and the done property is a boolean. This array is used to store a list of to-do items.
 var ul = document.querySelector('ul');
+//Empty array of objects with two properties, text and done. The text property is a string and the done property is a boolean. This array is used to store a list of to-do items.
 var todoList = [
     {
         text: 'Apprendre le Javascript',
-        done: true
+        done: false,
+        editMode: false
     },
     {
         text: 'Apprendre le typescript',
-        done: false
+        done: false,
+        editMode: false
     }
 ];
-//The function takes a list of todos (todoList) and creates a HTML element for each todo.
+//This code is a function that displays a list of todos. It takes in an array of todos (todoList) and maps through them. For each todo, it checks if it is in edit mode.Then it creates a HTML element for each todo.
 function displayTodo() {
     var todosNode = todoList.map(function (todo, index) {
-        return createTodoElementHtml(todo, index);
+        if (todo.editMode) {
+            return createEditTodoElement(todo, index);
+        }
+        else {
+            return createTodoElementHtml(todo, index);
+        }
     });
     ul.innerHTML = '';
     ul.append.apply(ul, todosNode);
 }
 function createTodoElementHtml(todo, index) {
     var li = document.createElement('li');
-    li.innerHTML = "\n        <span class=\"todo ".concat(todo.done ? 'done' : '', "\"></span>\n        <p>").concat(todo.text, "</p>\n        <button>Editer</button>\n        <button>supprimer</button>\n    ");
+    var deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = 'Supprimer';
+    var editBtn = document.createElement('button');
+    editBtn.innerHTML = 'Editer';
+    editBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        openEditMode(index);
+    });
+    deleteBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        deleteToDoElement(index);
+    });
+    li.innerHTML = "\n        <span class=\"todo ".concat(todo.done ? 'done' : '', "\"></span>\n        <p>").concat(todo.text, "</p>\n    ");
+    li.addEventListener('click', function (event) {
+        event.stopPropagation();
+        changeTodoStatut(index);
+    });
+    li.append(editBtn, deleteBtn);
     return li;
 }
 displayTodo();
+/* ------------------------------------------------------------------------
+1. Add toDo
+-------------------------------------------------------------------------*/
+var form = document.querySelector('form');
+var input = document.querySelector('.inputForm');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var inputValue = input.value;
+    input.value = '';
+    addTodoElement(inputValue);
+});
+//This code creates a new list item element with the given text (input) and appends it.
+function addTodoElement(text) {
+    todoList.push({
+        text: text,
+        done: false,
+        editMode: false
+    });
+    displayTodo();
+}
+/* ------------------------------------------------------------------------
+2. delete toDo
+-------------------------------------------------------------------------*/
+function deleteToDoElement(index) {
+    // This code removes an item from the todoList array at the specified index. The first argument (index) is the index of the item to be removed, and the second argument (1) is the number of items to be removed.
+    todoList.splice(index, 1);
+    displayTodo();
+}
+/* ------------------------------------------------------------------------
+3. Change done statut
+-------------------------------------------------------------------------*/
+function changeTodoStatut(index) {
+    //The code takes the index of the item in the todo list and sets the "done" property to the opposite of what it currently is.
+    todoList[index].done = !todoList[index].done;
+    displayTodo();
+}
+/* ------------------------------------------------------------------------
+4. Edit toDo
+-------------------------------------------------------------------------*/
+function createEditTodoElement(todo, index) {
+    var li = document.createElement('li');
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.value = todo.text;
+    var saveBtn = document.createElement('button');
+    saveBtn.innerHTML = 'Sauvegarder';
+    var cancelBtn = document.createElement('button');
+    cancelBtn.innerHTML = 'Annuler';
+    saveBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        saveEditTodo(index, input);
+    });
+    cancelBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        openEditMode(index);
+    });
+    li.append(input, cancelBtn, saveBtn);
+    return li;
+}
+/* ------------------------------------------------------------------------
+5. Edit mode button
+-------------------------------------------------------------------------*/
+function openEditMode(index) {
+    todoList[index].editMode = !todoList[index].editMode;
+    displayTodo();
+}
+/* ------------------------------------------------------------------------
+6. Save edit mode
+-------------------------------------------------------------------------*/
+//Sets the text of the todoList item at the given index to the new input value, sets the editMode of the todoList item at the given index to false, and calls the displayTodo() function.
+function saveEditTodo(index, input) {
+    var newInputValue = input.value;
+    todoList[index].text = newInputValue;
+    todoList[index].editMode = false;
+    displayTodo();
+}
 
 
 
@@ -629,7 +729,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
-/* harmony import */ var _assets_ts_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ts/animation */ "./src/assets/ts/animation.ts");
+/* harmony import */ var _assets_ts_function__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ts/function */ "./src/assets/ts/function.ts");
 
 
 

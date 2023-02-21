@@ -18,7 +18,7 @@
         margin-bottom: 20px;
 
         input {
-            border:  1px solid #ddd;
+            border:  1px solid $light-color;
             border-radius: 3px;
             flex: 1;
             margin-right: 15px;
@@ -33,6 +33,16 @@
 
         li {
             @include flex($direction: row);
+
+            padding: 10px 0;
+
+            input {
+                flex: 1;
+            }
+
+            &:hover {
+                background-color: $light-color;
+            }
 
             p {
                 flex: 1;
