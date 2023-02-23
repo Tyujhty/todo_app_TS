@@ -1,6 +1,10 @@
+@import '../utilities/variables';
+
 /* ------------------------------------------------------------------------- 
 0. GENERAL
 ------------------------------------------------------------------------- */
+
+
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -12,5 +16,25 @@ body {
     
     @include flex;
 
+    background-color: #FF4747;
     min-height: 100vh;
+
+    main {
+        @include flex();
+
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+.container {
+    @include flex();
+
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: $box-shadow-out;
+    height: auto;
+    width: 60%;
+
+
 }

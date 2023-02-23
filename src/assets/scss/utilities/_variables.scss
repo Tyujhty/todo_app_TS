@@ -1,6 +1,7 @@
 /* ------------------------------------------------------------------------- 
 SUMMARY 
 ------------------------------------------------------------------------- 0. Colors
+1. Box shadows
 
 /
 
@@ -9,8 +10,20 @@ SUMMARY
 0. Colors
 ------------------------------------------------------------------------- */
 
-$border-color: #eee;
 $background-color: #333;
-$button-color: #2980b9;
+$border-color: #eee;
+$button-color: #6AB2BA;
+$button-color-danger: #DC5D5D;
+$button-color-danger-hover: #da3e3e;
+$button-color-hover: #3b949e;
 $button-text-color : white;
+$form-background-input: #E9E9E9;
 $light-color : #ddd;
+$text-color: #424242;
+
+/* ------------------------------------------------------------------------ 
+1. Box shadows
+------------------------------------------------------------------------- */
+
+$box-shadow-out: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+$box-shadow-inner: rgb(196, 196, 196) 0px 2px 4px inset;

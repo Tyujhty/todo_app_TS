@@ -8,11 +8,11 @@ const ul = document.querySelector('ul')
 const todoList: { text: string, done: boolean, editMode: boolean } [] = [
     {
         text: 'Apprendre le Javascript',
-        done: false,
+        done: true,
         editMode: false
     },
     {
-        text: 'Apprendre le typescript',
+        text: 'Apprendre Typescript',
         done: false,
         editMode: false
     }
@@ -33,12 +33,14 @@ function displayTodo() {
 
 function createTodoElementHtml(todo: any, index: number) {
     const li = document.createElement('li')
+    const span = document.querySelector('span')
     
     const deleteBtn = document.createElement('button')
-    deleteBtn.innerHTML = 'Supprimer'
+    deleteBtn.className = 'btn-danger'
+    deleteBtn.innerHTML = 'Delete'
 
     const editBtn = document.createElement('button')
-    editBtn.innerHTML = 'Editer'
+    editBtn.innerHTML = 'Edit'
 
     editBtn.addEventListener('click', (event) => {
         event.stopPropagation()
@@ -133,10 +135,11 @@ function createEditTodoElement(todo: any, index: number) {
     input.value = todo.text
     
     const saveBtn = document.createElement('button')
-    saveBtn.innerHTML = 'Sauvegarder'
+    saveBtn.innerHTML = 'Save'
 
     const cancelBtn = document.createElement('button')
-    cancelBtn.innerHTML = 'Annuler'
+    cancelBtn.className = 'btn-danger'
+    cancelBtn.innerHTML = 'Cancel'
 
     saveBtn.addEventListener('click', (event) => {
         event.stopPropagation()
